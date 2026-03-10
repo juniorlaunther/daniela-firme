@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Open Graph Tags -->
+    <title>Daniela Firme | Cantora e Compositora | Shows e Agenda</title>
+    <meta name="description" content="Contrate o show de Daniela Firme. Voz marcante, pop, rock e canção brasileira. Finalista do Prêmio Multishow. Energia visceral para o seu evento.">
+    <meta name="keywords" content="Daniela Firme, Cantora, Show, Contratar Show, Rock Beats, Pop, Rock, MPB, Música, Eventos">
+    <meta name="author" content="Daniela Firme">
+    
+    <meta property="og:title" content="Daniela Firme | Cantora e Compositora">
+    <meta property="og:description" content="Contrate o show de Daniela Firme. Voz marcante, pop, rock e canção brasileira. Finalista do Prêmio Multishow.">
+    <meta property="og:image" content="https://instagram.fcpq7-1.fna.fbcdn.net/v/t51.82787-15/618544461_18556262014006728_7413993838333182431_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ig_cache_key=MzgxMjUzMTczMDc1NDg4MjgzNQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTc5NS5zZHIuQzMifQ%3D%3D&_nc_ohc=UdT0eWQi4oEQ7kNvwEm_AMi&_nc_oc=AdkyXiD1cFpF1P-AEJeKK1yXqVAokE2QAx33x0XtixvNg3fZ0Db9hHb83Ne5y0s308g&_nc_ad=z-m&_nc_cid=1138&_nc_zt=23&_nc_ht=instagram.fcpq7-1.fna&_nc_gid=fss1xavrhX1renU0nNR63A&_nc_ss=8&oh=00_AfxXdKzRBmHaQ3DfRUC_Aq6DLg9vOWlA79BQFt9EQrh9eA&oe=69B63334">
+    <meta property="og:url" content="https://danielafirme.com.br">
+    <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Daniela Firme | Cantora e Compositora">
+    <meta name="twitter:description" content="Contrate o show de Daniela Firme. Voz marcante, pop, rock e canção brasileira.">
+    <meta name="twitter:image" content="https://instagram.fcpq7-1.fna.fbcdn.net/v/t51.82787-15/618544461_18556262014006728_7413993838333182431_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ig_cache_key=MzgxMjUzMTczMDc1NDg4MjgzNQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTc5NS5zZHIuQzMifQ%3D%3D&_nc_ohc=UdT0eWQi4oEQ7kNvwEm_AMi&_nc_oc=AdkyXiD1cFpF1P-AEJeKK1yXqVAokE2QAx33x0XtixvNg3fZ0Db9hHb83Ne5y0s308g&_nc_ad=z-m&_nc_cid=1138&_nc_zt=23&_nc_ht=instagram.fcpq7-1.fna&_nc_gid=fss1xavrhX1renU0nNR63A&_nc_ss=8&oh=00_AfxXdKzRBmHaQ3DfRUC_Aq6DLg9vOWlA79BQFt9EQrh9eA&oe=69B63334">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230A7A86'/><text x='50' y='72' font-family='sans-serif' font-weight='bold' font-size='65' fill='white' text-anchor='middle'>D</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#050505',
+                        petroleo: '#0A7A86',
+                        petroleoDark: '#065A63',
+                        petroleoLight: '#129EAD',
+                    },
+                    fontFamily: {
+                        display: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <style>
+        body { background-color: #050505; color: #ffffff; overflow-x: hidden; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .marquee { display: flex; overflow: hidden; white-space: nowrap; }
+        .marquee-content { display: flex; animation: marquee 20s linear infinite; }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .text-gradient { background: linear-gradient(to right, #129EAD, #0A7A86); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-overlay { background: linear-gradient(to bottom, rgba(5,5,5,0.3) 0%, rgba(5,5,5,0.9) 80%, rgba(5,5,5,1) 100%); }
+        img { pointer-events: none; }
+    </style>
+</head>
+<body class="antialiased selection:bg-petroleo selection:text-white">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 transition-all duration-300 glass" id="header">
+        <div class="container mx-auto px-4 md:px-6 py-3 md:py-4 flex justify-between items-center">
+            <a href="#" class="font-display font-bold text-xl md:text-2xl tracking-tighter text-white shrink-0">
+                DANIELA<span class="text-petroleo">FIRME</span>
+            </a>
+            <nav class="hidden md:flex gap-8 items-center">
+                <a href="#sobre" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Sobre</a>
+                <a href="#lancamento" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Música</a>
+                <a href="#diferenciais" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Diferenciais</a>
+            </nav>
+            <a href="https://wa.me/556198108778" target="_blank" class="bg-petroleo hover:bg-petroleoLight text-white px-4 py-2 md:px-6 md:py-2.5 rounded-full text-xs md:text-sm font-semibold transition-all duration-300 shadow-[0_0_15px_rgba(10,122,134,0.4)] hover:shadow-[0_0_25px_rgba(10,122,134,0.6)] whitespace-nowrap ml-2">
+                Contratar Show
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 w-full h-full">
+            <img src="https://instagram.fcpq7-1.fna.fbcdn.net/v/t51.82787-15/618544461_18556262014006728_7413993838333182431_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ig_cache_key=MzgxMjUzMTczMDc1NDg4MjgzNQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTc5NS5zZHIuQzMifQ%3D%3D&_nc_ohc=UdT0eWQi4oEQ7kNvwEm_AMi&_nc_oc=AdkyXiD1cFpF1P-AEJeKK1yXqVAokE2QAx33x0XtixvNg3fZ0Db9hHb83Ne5y0s308g&_nc_ad=z-m&_nc_cid=1138&_nc_zt=23&_nc_ht=instagram.fcpq7-1.fna&_nc_gid=fss1xavrhX1renU0nNR63A&_nc_ss=8&oh=00_AfxXdKzRBmHaQ3DfRUC_Aq6DLg9vOWlA79BQFt9EQrh9eA&oe=69B63334" 
+                 alt="Daniela Firme no Palco" 
+                 class="w-full h-full object-cover object-top">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center mt-20">
+            <div class="inline-block mb-4 px-4 py-1.5 rounded-full border border-petroleo/30 bg-petroleo/10 backdrop-blur-sm hero-elem">
+                <span class="text-petroleoLight text-xs font-bold tracking-widest uppercase">Finalista Prêmio Multishow</span>
+            </div>
+            <h1 class="font-display font-bold text-5xl md:text-7xl lg:text-8xl leading-tight tracking-tight mb-6 hero-elem max-w-5xl mx-auto">
+                A VOZ QUE <span class="text-gradient italic">TRANSFORMA</span><br /> O SEU PALCO.
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light hero-elem">
+                Energia visceral, pop, rock e canção brasileira em uma performance inesquecível. Leve a intensidade de Daniela Firme para o seu evento.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center hero-elem">
+                <a href="https://wa.me/556198108778" target="_blank" class="bg-petroleo hover:bg-petroleoLight text-white px-8 py-4 rounded-full text-base font-semibold transition-all duration-300 shadow-[0_0_20px_rgba(10,122,134,0.4)] hover:shadow-[0_0_40px_rgba(10,122,134,0.7)] w-full sm:w-auto">
+                    Falar com a Produção
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Authority Marquee -->
+    <div class="w-full bg-petroleoDark/20 border-y border-white/5 py-6 marquee">
+        <div class="marquee-content items-center gap-16 px-8">
+            <div class="flex items-center gap-4"><span class="text-petroleo text-xl">✦</span><span class="font-display font-bold text-xl uppercase">+61.8 Mil Seguidores</span></div>
+            <div class="flex items-center gap-4"><span class="text-petroleo text-xl">✦</span><span class="font-display font-bold text-xl uppercase">+600 Mil Streams</span></div>
+            <div class="flex items-center gap-4"><span class="text-petroleo text-xl">✦</span><span class="font-display font-bold text-xl uppercase">Finalista Prêmio Multishow</span></div>
+            <div class="flex items-center gap-4"><span class="text-petroleo text-xl">✦</span><span class="font-display font-bold text-xl uppercase">+3.600 Ouvintes Mensais</span></div>
+            <!-- Duplicate for loop -->
+            <div class="flex items-center gap-4"><span class="text-petroleo text-xl">✦</span><span class="font-display font-bold text-xl uppercase">+61.8 Mil Seguidores</span></div>
+            <div class="flex items-center gap-4"><span class="text-petroleo text-xl">✦</span><span class="font-display font-bold text-xl uppercase">+600 Mil Streams</span></div>
+            <div class="flex items-center gap-4"><span class="text-petroleo text-xl">✦</span><span class="font-display font-bold text-xl uppercase">Finalista Prêmio Multishow</span></div>
+            <div class="flex items-center gap-4"><span class="text-petroleo text-xl">✦</span><span class="font-display font-bold text-xl uppercase">+3.600 Ouvintes Mensais</span></div>
+        </div>
+    </div>
+
+    <!-- Lançamento Recente -->
+    <section id="lancamento" class="py-12 md:py-16 bg-dark relative">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-8 md:mb-12 gs-reveal">
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">AO VIVO NO <span class="text-petroleo italic">PALCO</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Sinta a energia e a entrega visceral do show mais recente.</p>
+            </div>
+            <div class="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 gs-reveal">
+                <div class="aspect-video w-full bg-black">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/HGsxBzResyM?rel=0" title="Daniela Firme Ao Vivo" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais (Bento Grid) -->
+    <section id="diferenciais" class="py-12 md:py-16 relative border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="mb-8 md:mb-12 gs-reveal">
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">POR QUE <span class="text-petroleo italic">CONTRATAR?</span></h2>
+                <p class="text-gray-400 max-w-2xl">O que faz do show de Daniela Firme uma experiência única e inesquecível para o seu público.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:auto-rows-[250px]">
+                <div class="md:col-span-2 md:row-span-2 glass rounded-3xl p-8 relative overflow-hidden group gs-reveal min-h-[250px]">
+                    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1540039155733-d7696d4eb98b?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center opacity-10 group-hover:opacity-20 transition-opacity duration-500 mix-blend-luminosity"></div>
+                    <div class="relative z-10 h-full flex flex-col justify-end">
+                        <div class="w-12 h-12 rounded-full bg-petroleo/20 flex items-center justify-center mb-6 border border-petroleo/30 text-petroleo">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="font-display text-3xl font-bold mb-3">Presença de Palco Absoluta</h3>
+                        <p class="text-gray-300 text-lg max-w-md">Energia contagiante que prende o público do início ao fim. Uma performance magnética construída em anos de estrada.</p>
+                    </div>
+                </div>
+
+                <div class="glass rounded-3xl p-8 relative overflow-hidden group gs-reveal min-h-[200px]">
+                    <div class="relative z-10 h-full flex flex-col justify-end">
+                        <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 mb-4">
+                            <svg class="w-5 h-5 text-petroleo" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-2">Repertório Versátil</h3>
+                        <p class="text-gray-400 text-sm">Pop, rock e canção brasileira em perfeita harmonia, adaptável ao clima do seu evento.</p>
+                    </div>
+                </div>
+
+                <div class="glass rounded-3xl p-8 relative overflow-hidden group gs-reveal min-h-[200px]">
+                    <div class="relative z-10 h-full flex flex-col justify-end">
+                        <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 mb-4">
+                            <svg class="w-5 h-5 text-petroleo" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-2">Conexão Real</h3>
+                        <p class="text-gray-400 text-sm">Letras íntimas e viscerais que geram identificação imediata com o público presente.</p>
+                    </div>
+                </div>
+
+                <div class="md:col-span-3 glass rounded-3xl p-8 relative overflow-hidden group gs-reveal flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="relative z-10 max-w-2xl">
+                        <div class="w-12 h-12 rounded-full bg-petroleo/20 flex items-center justify-center mb-4 border border-petroleo/30 text-petroleo">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                        </div>
+                        <h3 class="font-display text-2xl font-bold mb-3">Experiência Comprovada</h3>
+                        <p class="text-gray-300">Anos de sucesso absoluto à frente da Rock Beats, arrastando multidões. Agora, em uma carreira solo madura, pronta para entregar o mais alto padrão de entretenimento.</p>
+                    </div>
+                    <a href="https://wa.me/556198108778" target="_blank" class="shrink-0 bg-white text-dark hover:bg-petroleo hover:text-white px-8 py-3 rounded-full font-bold transition-colors duration-300">
+                        Reservar Data
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="py-12 md:py-16 relative border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-10 lg:gap-12 items-center">
+                <div class="w-full lg:w-1/2 gs-reveal">
+                    <div class="relative rounded-2xl overflow-hidden aspect-[4/5] max-w-md mx-auto lg:mx-0">
+                        <img src="https://instagram.fcpq7-1.fna.fbcdn.net/v/t51.75761-15/483914078_18492353827005818_8901493004658973695_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ig_cache_key=MzU4OTY3MDc1MjU1NjI0MDA3NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjExOTR4MTE5NC5zZHIuQzMifQ%3D%3D&_nc_ohc=NNk5Za_7SHkQ7kNvwGGLl1e&_nc_oc=Admbz7ofSVyk5OsvbxZKxCOhEGKxMgS_QeQecBlNojru4MJsYIiqv5N7kpKJJuc4TC4&_nc_ad=z-m&_nc_cid=1138&_nc_zt=23&_nc_ht=instagram.fcpq7-1.fna&_nc_gid=JY0op_HzQLhlSDV4QJ0wPQ&_nc_ss=8&oh=00_AfwMIX53KF2DKxyQCnAznMBKN1z0k_w7_wqk8XyEOykaGg&oe=69B625AB" 
+                             alt="Daniela Firme Retrato" 
+                             class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-petroleo rounded-full blur-[80px] opacity-50 z-0"></div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 gs-reveal">
+                    <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">A ESSÊNCIA DA <span class="text-petroleo italic">MÚSICA</span></h2>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                        Daniela Firme é cantora e compositora de Brasília, reconhecida pela voz marcante e presença intensa no palco. Depois de conquistar milhares de pessoas à frente da Rock Beats, agora apresenta seu trabalho solo.
+                    </p>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-10">
+                        Unindo pop, rock e canção brasileira em letras íntimas e viscerais, sua música fala de recomeços, encontros e da coragem de se mostrar inteira. Uma artista completa pronta para elevar o nível do seu evento.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://open.spotify.com/intl-pt/artist/0LVhIXId5pzaUT603jfvDk?si=MIH2OmdsTJ6mHeJzybWhXw" target="_blank" class="px-6 py-2 rounded-full glass hover:bg-petroleo transition-colors">Spotify</a>
+                        <a href="https://www.instagram.com/danielafirme/" target="_blank" class="px-6 py-2 rounded-full glass hover:bg-petroleo transition-colors">Instagram</a>
+                        <a href="https://www.youtube.com/@danielafirme" target="_blank" class="px-6 py-2 rounded-full glass hover:bg-petroleo transition-colors">YouTube</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="py-12 md:py-16 bg-dark relative border-t border-white/5">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-8 md:mb-12 gs-reveal">
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">O QUE <span class="text-petroleo italic">DIZEM</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">A garantia de um evento de sucesso através de quem já contratou.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="glass p-8 rounded-2xl gs-reveal hover:-translate-y-2 transition-transform duration-300">
+                    <p class="text-gray-300 italic mb-6">"Um dos melhores shows que já tivemos na nossa casa. O público cantou do início ao fim! A Daniela tem um domínio de palco impressionante."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-petroleo flex items-center justify-center font-bold">C</div>
+                        <div>
+                            <h4 class="font-bold text-white">Contratante</h4>
+                            <p class="text-xs text-gray-400">Casa de Shows Premium</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-2xl gs-reveal hover:-translate-y-2 transition-transform duration-300">
+                    <p class="text-gray-300 italic mb-6">"Profissionalismo impecável desde a contratação até o último acorde. A energia que ela transmite é surreal. Com certeza voltaremos a fechar."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-petroleo flex items-center justify-center font-bold">P</div>
+                        <div>
+                            <h4 class="font-bold text-white">Produtor de Eventos</h4>
+                            <p class="text-xs text-gray-400">Festival de Música</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 md:py-12 border-t border-white/5 bg-dark text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="font-display font-bold text-2xl tracking-tighter text-white mb-6">
+                DANIELA<span class="text-petroleo">FIRME</span>
+            </h2>
+            <p class="text-gray-500 text-sm">Copyright 2026 - Daniela Firme. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // GSAP Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero Animation
+        gsap.from(".hero-elem", {
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.2,
+            ease: "power3.out",
+            delay: 0.2
+        });
+
+        // Scroll Reveal
+        gsap.utils.toArray('.gs-reveal').forEach(function(elem) {
+            gsap.from(elem, {
+                scrollTrigger: {
+                    trigger: elem,
+                    start: "top 85%",
+                },
+                y: 50,
+                opacity: 0,
+                duration: 1,
+                ease: "power3.out"
+            });
+        });
+
+        // Header Blur on Scroll
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('bg-dark/80');
+                header.classList.remove('bg-transparent');
+            } else {
+                header.classList.add('bg-transparent');
+                header.classList.remove('bg-dark/80');
+            }
+        });
+    </script>
+</body>
+</html>
